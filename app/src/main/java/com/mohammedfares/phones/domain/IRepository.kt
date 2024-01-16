@@ -1,4 +1,11 @@
 package com.mohammedfares.phones.domain
 
-interface IReposytory {
+import com.mohammedfares.phones.data.Phone
+
+interface IRepository {
+    fun getAll(): List<Phone>
+    fun getById(id: Long): Phone?
+    suspend fun delete(phone: Phone): Int
+    suspend fun update(phone: Phone): Int
+    suspend fun create(phone: Phone): Long
 }
