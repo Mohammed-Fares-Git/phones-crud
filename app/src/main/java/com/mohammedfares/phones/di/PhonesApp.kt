@@ -1,4 +1,8 @@
-package com.mohammedfares.di
+package com.mohammedfares.phones.di
 
-class PhonesApp {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class PhonesApp : Application() {
 }
