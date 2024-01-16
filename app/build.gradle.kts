@@ -50,6 +50,16 @@ android {
         }
     }
 }
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+tasks.withType<JavaCompile> {
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8"
+}
+
+
 
 dependencies {
 
@@ -70,8 +80,8 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.50")
+    kapt("com.google.dagger:hilt-android-compiler:2.50")
 
 
     val room_version = "2.6.1"
@@ -85,6 +95,9 @@ dependencies {
     val nav_version = "2.5.3"
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    implementation("androidx.room:room-ktx:$room_version")
+
 }
 
 kapt {
