@@ -18,4 +18,7 @@ interface PhoneDao {
     fun selectAll(): List<Phone>
     @Query("SELECT * FROM mobile_phones WHERE id = :id")
     fun selectById(id: Long): Phone
+
+    @Query("SELECT name FROM mobile_phones WHERE name LIKE '%' || :searchParam || '%'")
+    suspend fun searchPhoneNames(searchParam: String): List<String>
 }
