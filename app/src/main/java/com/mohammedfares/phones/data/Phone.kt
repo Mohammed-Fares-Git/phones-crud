@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "mobile_phones")
 data class Phone(
     @PrimaryKey(autoGenerate = true)
-    val id: Long,
+    val id: Long? = null,
     val name: String,
     val price: Int,
     val image: String,
