@@ -22,4 +22,8 @@ class Repository @Inject constructor(
         return dao.inert(phone)
     }
 
+    override suspend fun search(searchParam: String): List<String> {
+        return dao.searchPhoneNames(searchParam)
+    }
+
 }
