@@ -79,6 +79,9 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
+
 
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-android-compiler:2.50")
@@ -98,6 +101,10 @@ dependencies {
 
     implementation("androidx.room:room-ktx:$room_version")
 
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
+    implementation("androidx.compose.material3:material3:1.1.2")
+    implementation("androidx.compose.material:material-icons-extended")
 }
 
 kapt {
