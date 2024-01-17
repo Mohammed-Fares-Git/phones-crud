@@ -8,4 +8,5 @@ interface IRepository {
     suspend fun delete(phone: Phone): Int
     suspend fun update(phone: Phone): Int
     suspend fun create(phone: Phone): Long
+    suspend fun search(searchParam: String): List<String>
 }
